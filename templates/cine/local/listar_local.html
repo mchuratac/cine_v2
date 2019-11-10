@@ -1,0 +1,41 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}
+    Listar Locales
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col">
+            <h3 class="one">&nbsp;</h3>
+        </div>
+        <div class="col-autor">
+            <a class="btn btn-primary pull-right" href="{% url 'cine:crear_local' %}">
+                <i class="fa fa-add"></i>Crear Local
+            </a>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombres</th>
+            <th>Nacionalidad</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for local in locales %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ local.nombre }} {{ local.direccion }}</td>
+                <td>{{ autor.distrito|upper }}</td>
+                <td>
+                     
+
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,23 @@
+body {
+    background: url('https://source.unsplash.com/twukN12EN7c/1920x1080') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+  
+  .card-center {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .card-center > img {
+    width: 150px;
+    height: 130px;
+  }
+  
+  .avatar {
+    width: 232px;
+    height: 250px;
+  }

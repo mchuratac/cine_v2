@@ -1,0 +1,20 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}
+    Listar Autores
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        {% for libro in libros %}
+            <div class="col-4 mb-4">
+                <div class="card card-center">
+                    <img src="{{ libro.imagen.url }}" class="card-img-top mt-2" alt="">
+                    <div class="card-body">
+                        <p class="card-text">{{ libro.titulo }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
